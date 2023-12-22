@@ -3,81 +3,214 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/output.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Kaushan+Script&family=Uncial+Antiqua&display=swap"
+      rel="stylesheet"
+    />
     <title>CV</title>
   </head>
-  <body>
-    <header>
-      <h2 class="logo">Eyob Derese</h2>
-
-      <button class="btn-tagle">
-        <svg class="icon-aside icon--white">
-          <use xlink:href="images/sprite.svg#three-horizontal-lines-icon"></use>
-        </svg>
-      </button>
+  <body class="bg-[#101820]">
+    <header
+      class="bg-[#1a1600] text-white md:flex md:justify-between md:p-4 justify-center align-middle items-center fixed top-0 w-full"
+    >
+      <div class="flex justify-between align-middle">
+        <span class="text-2xl font-[Uncial Antiqua]"> Eyob Derese</span>
+        <span class="togol mr-4 mt-2 md:opacity-0">
+          <button id="togol">
+            <img
+              class="w-[24px] h-[24px]"
+              src="images/icons/icons8-menu-50.png"
+              alt=""
+            />
+          </button>
+        </span>
+        <span class="cancel mr-4 mt-2 hidden">
+          <button id="cancel">
+            <img
+              class="w-[24px] h-[24px]"
+              id="menu"
+              src="images/icons/icons8-cancel-50.png"
+              alt=""
+            />
+          </button>
+        </span>
+      </div>
+      <nav class="nav hidden md:inline-block">
+        <ul class="flex flex-col md:flex-row items-center">
+          <li class="hover:bg-gray-700 rounded-md px-2 py-1">
+            <a class="mx-2 opacity-70 hover:opacity-100" href="HomePage.html"
+              >Home</a
+            >
+          </li>
+          <li class="hover:bg-gray-700 rounded-md px-2 py-1">
+            <a class="mx-2 opacity-70 hover:opacity-100" href="AboutPage.html"
+              >About</a
+            >
+          </li>
+          <li class="hover:bg-gray-700 rounded-md px-2 py-1">
+            <a class="mx-2 opacity-70 hover:opacity-100" href="ProjectPage.html"
+              >Project</a
+            >
+          </li>
+          <li class="hover:bg-gray-700 rounded-md px-2 py-1">
+            <a
+              class="mx-2 opacity-70 hover:opacity-100"
+              href="RecommendationPage.html"
+              >Recommendation</a
+            >
+          </li>
+          <li class="hover:bg-gray-700 rounded-md px-2 py-1">
+            <a class="mx-2 opacity-70 hover:opacity-100" href="CVPage.html"
+              >CV</a
+            >
+          </li>
+          <li class="hover:bg-gray-700 rounded-md px-2 py-1">
+            <a class="mx-2 opacity-70 hover:opacity-100" href="ContactPage.html"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="main-aside">
-      <main>
-        <section class="pdfviewer">
-          <h1>CV</h1>
-          <a class="btn" href="images/Eyob_Derese_CV.pdf" download="Eyob_CV.pdf"
+    <!-- ===================================Aside and Main====================================================================================== -->
+    <div class="main-aside mt-24 flex gap-3">
+      <aside
+        class="aside bg-white max-w-sm p-5 rounded-lg ml-6 hidden lg:block"
+      >
+        <div
+          class="aside__header flex flex-col justify-center items-center mb-6"
+        >
+          <img
+            class="aside__image w-64 h-64 rounded-lg"
+            src="images/cartoon.jpg"
+            alt="eyob's photo"
+          />
+          <button class="bg-slate-500 p-2 mt-2 w-64">Eyob Derese</button>
+        </div>
+
+        <section class="aside__information flex flex-col gap-5">
+          <div class="aside__contact flex items-center gap-2">
+            <span
+              class="aside__icon-container inline-flex bg-slate-500 items-center px-3 py-2 rounded-md"
+            >
+              <img
+                class="w-10 h-12"
+                src="images/icons/envelope-line-icon.svg"
+                alt=""
+              />
+            </span>
+            <p><span class="block">Email</span> eyob.derese@aait.edu.et</p>
+          </div>
+
+          <div class="aside__contact flex items-center gap-2">
+            <span
+              class="aside__icon-container inline-flex bg-slate-500 items-center px-3 py-2 rounded-md"
+            >
+              <img
+                class="w-10 h-12"
+                src="images/icons/smartphone-icon.svg"
+                alt=""
+              />
+            </span>
+            <p><span class="block">Phone</span> +251-973385181</p>
+          </div>
+
+          <div class="aside__contact flex items-center gap-2">
+            <span
+              class="aside__icon-container inline-flex bg-slate-500 items-center px-3 py-2 rounded-md"
+            >
+              <img
+                class="w-10 h-12"
+                src="images/icons/maps-pin-line-icon.svg"
+                alt=""
+              />
+            </span>
+            <div>
+              <span class="block">Location</span>
+              <address>Addis Ababa, Ethiopia</address>
+            </div>
+          </div>
+
+          <div class="aside__contact flex items-center gap-2">
+            <span
+              class="aside__icon-container inline-flex bg-slate-500 items-center px-3 py-2 rounded-md"
+            >
+              <img
+                class="w-10 h-12"
+                src="images/icons/calendar-blank-icon.svg"
+                alt=""
+              />
+            </span>
+            <p><span class="block">Birthday</span>20-05-2002</p>
+          </div>
+        </section>
+      </aside>
+      <!-- =================================Main======================================================================================= -->
+      <main class="m-4">
+        <section class="flex flex-col items-center justify-center">
+          <h1 class="text-white mb-2 text-2xl self-start">CV</h1>
+          <a
+            class="bg-yellow-700 px-8 py-2 rounded-xl hover:bg-yellow-500"
+            href="images/Eyob_Derese_CV.pdf"
+            download="Eyob_CV.pdf"
             >Download</a
           >
-          <embed
-            src="images/Eyob_Derese_CV.pdf#toolbar=0"
-            type="application/pdf"
-          />
-          <a class="btn" href="images/Eyob_Derese_CV.pdf" download="Eyob_CV.pdf"
+          <img class="max-h-[1200px] m-6" src="images/CV.svg" alt="" />
+          <a
+            class="bg-yellow-700 px-8 py-2 rounded-xl hover:bg-yellow-500"
+            href="images/Eyob_Derese_CV.pdf"
+            download="Eyob_CV.pdf"
             >Download</a
           >
         </section>
       </main>
     </div>
-
-    <footer>
-      <p class="copyright">
-        copyright &copy; 2023 devlelop with
-        <svg class="icon">
-          <use xlink:href="images/sprite.svg#red-heart-icon"></use>
-        </svg>
-        by Eyob
+    <!-- =====================================Footer======================================================================================= -->
+    <footer
+      class="w-full flex flex-col md:flex-row md:justify-between items-center p-4 bg-cyan-500 gap-3 mt-3"
+    >
+      <p class="footer__copyright md:ml-10">
+        copyright &copy; 2023 devlelop by Eyob
       </p>
-      <div class="social-midea">
+      <div class="footer__social-midea flex gap-2">
         <a href="#">
-          <svg class="icon icon--white">
+          <svg class="icon w-7 h-7 fill-white">
             <use
               xlink:href="images/sprite.svg#facebook-app-round-white-icon"
             ></use>
           </svg>
         </a>
         <a href="#">
-          <svg class="icon icon--white">
+          <svg class="icon w-7 h-7 fill-white">
             <use xlink:href="images/sprite.svg#x-social-media-black-icon"></use>
           </svg>
         </a>
 
         <a href="#">
-          <svg class="icon icon--white">
+          <svg class="icon w-7 h-7 fill-white">
             <use xlink:href="images/sprite.svg#telegram-white-icon"></use>
           </svg>
         </a>
 
         <a href="#">
-          <svg class="icon icon--white">
+          <svg class="icon w-7 h-7 fill-white">
             <use xlink:href="images/sprite.svg#icons8-linkedin"></use>
           </svg>
         </a>
 
         <a href="#">
-          <svg class="icon icon--white">
+          <svg class="icon w-7 h-7 fill-white">
             <use xlink:href="images/sprite.svg#icons8-github"></use>
           </svg>
         </a>
       </div>
     </footer>
+
+    <script src="Js/script.js"></script>
   </body>
 </html>
